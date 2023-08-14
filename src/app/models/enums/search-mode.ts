@@ -1,0 +1,4 @@
+export enum SEARCH_MODE {
+  PERSON_SEARCH = 1,
+  COMPANY_SEARCH = 2,
+}

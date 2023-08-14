@@ -1,0 +1,52 @@
+<ng-container *ngIf="survey;else loading">
+  <hr class="m-3" />
+  <h3 class="mt-2 font-bold mb-2 text-[#064663] uppercase">MARKETING QUESTIONS</h3>
+  <div class="mt-2" *ngFor="let question of survey.questions">
+    <ng-container *ngIf="question.settings.isDisplayedOnline === true">
+      <ng-container
+        *ngIf="question.answer.answerTextType
+      || question.answer.answerTextType
+      || !(question.answer.answerLargeType?.fileName)"
+      >
+        <ng-container
+          *ngIf="question.displayText
+        && question.answerTypeId !== SURVEY_ANSWER_TYPE.Description
+        && (question.answer.answerTextType?.answerText
+        || question.answer.answerChoiceType?.selectedChoices
+        || question.answer.answerLargeType)"
+        >
+          <!-- <p [ngClass]="{'question':question.answerTypeId !== SURVEY_ANSWER_TYPE.Description}">
+            {{question.displayText}}
+          </p> -->
+          <p class="font-bold">
+            {{question.displayText}}
+          </p>
+        </ng-container>
+        <ng-container>
+          <!-- answerLargeType -->
+          <div *ngIf="question.answer.answerLargeType?.data">
+            <p>{{question.answer.answerLargeType?.data}}</p>
+          </div>
+
+          <!-- answerTextType -->
+          <div *ngIf="question.answer.answerTextType">
+            <p>{{question.answer.answerTextType.answerText}}</p>
+          </div>
+
+          <div>
+            <ng-container *ngFor="let selectedChoice of question.answer.answerChoiceType?.selectedChoices; let x=index">
+              <span *ngIf="selectedChoice.text">
+                {{selectedChoice.text}}
+                <span *ngIf="selectedChoice.userInput">({{selectedChoice.userInput}})</span>
+                <span *ngIf="x < question.answer.answerChoiceType?.selectedChoices!.length-1">, </span>
+              </span>
+            </ng-container>
+          </div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-container>
+<ng-template #loading>
+  <app-loader *ngIf="survey !== null"></app-loader>
+</ng-template>

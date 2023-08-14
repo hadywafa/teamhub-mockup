@@ -1,0 +1,46 @@
+import { CommInfo } from "./comm-info";
+import Company from "./company";
+import Flag from "./flag";
+
+export default class Person {
+  personId!: number;
+  rootId!: number;
+  childId!: number;
+  companyId!: number;
+  sponsoredBy!: number;
+  personTypeId!: number;
+  personNumber!: number;
+  legacyNumber!: string;
+  salutation!: string;
+  firstName!: string;
+  middleName!: string;
+  lastName!: string;
+  suffix!: string;
+  designation!: string;
+  title!: string;
+  informalName!: string;
+  gender!: string;
+  dob!: Date;
+  geographicRegionId!: number;
+  child!: Person;
+  personCompany!: Company;
+  countryId!: number;
+  cityId!: number;
+  stateId!: number;
+  email!: string;
+  AreaCode!: string;
+  phoneNumber!: number;
+  loginId!: string;
+  flags!: Iterable<Flag>;
+  publish: CommInfo = new CommInfo();
+  personRegistrationId!: number;
+  scheduleBookID!: number;
+  targetScheduleTypeID!: number;
+  isProspect!: boolean;
+  profileURL!: string;
+  facebookUrl!: string;
+  linkedinUrl!: string;
+  instagramUrl!: string;
+  twitterUrl!: string;
+  companyName!: string;
+}

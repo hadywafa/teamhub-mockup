@@ -1,0 +1,16 @@
+export enum SURVEY_ANSWER_TYPES {
+  Integer = 1,
+  Float = 2,
+  String = 3,
+  DateTime = 4,
+  Choice = 5,
+  DateOnly = 6,
+  TimeOnly = 7,
+  LargeText = 8,
+  Image = 9,
+  Rank = 10,
+  Order = 11,
+  Description = 12,
+  Table = 13,
+  Binary = 14,
+}

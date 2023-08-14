@@ -1,0 +1,15 @@
+export enum SURVEY_GROUP_NAMES {
+  // PARENT_QUESTION = "ParentQuestion",
+  // CHILD_QUESTION = "ChildQuestion",
+  PARENT_QUESTION = "question",
+  CHILD_QUESTION = "question",
+  CHECKBOX = "choiceCheckBox",
+  RADIO_BUTTON = "choiceRadioButton",
+  MULTI_SELECT = "choiceMultiSelect",
+  SIMPLE_INPUT = "simpleInput",
+  ORDER = "order",
+  RANK = "rank",
+  TABLE = "table",
+  FILES = "file",
+  LARGE_TEXT = "largeText",
+}

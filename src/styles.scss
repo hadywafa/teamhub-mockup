@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(../node_modules/@angular/material/prebuilt-themes/indigo-pink.css);
+// Import the Angular Material theming module
+@import "../node_modules/@angular/material/theming";
+
+// Import your custom theme file
+// @import "src/custom-theme.scss";
+
+// Include the Angular Material theme styles for core and each component used in your app.
+// @include mat-core();
+// @include angular-material-theme($dynamic-app-theme);
+// @include angular-material-typography($dynamic-typography);
+
+/* @import '~ngx-print-element/styles.css'; */
+html,
+body {
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Remove that when you Replace All Bootstrap Component */
+/* Conflict Between Bootstrap Class and Tailwind Class */
+.collapse {
+  visibility: visible;
+}
+
+/*------------------------------------- SCROLLING ------------------------------*/
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-lg bg-gray-300  border-gray-400;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primaryColor rounded-lg  border-transparent  bg-clip-content;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primaryColor  rounded-lg  border-transparent bg-clip-content;
+}

@@ -1,0 +1,41 @@
+import CommInfo from "./comm-info";
+import Flag from "./flag";
+import Person from "./person";
+import CompanySurvey from "../../Survey/models/Survey/company-survey";
+
+export default class Company {
+  companyId!: number;
+  companyRegistrationId!: number;
+  instanceOwnerId!: number;
+  sourceId!: number;
+  companyTypeId!: number;
+  geographicRegionId!: number;
+  companyName!: string;
+  sortName!: string;
+  legalName!: string;
+  companyNumber!: number;
+  legacyNumber!: string;
+  nextPersonNumber!: number;
+  primaryPersonId!: number;
+  preferredAirCarrier!: string;
+  rfcTaxCode!: string;
+  registrationTypeId!: number;
+  businessLicenseNumber!: string;
+  iataNumber!: string;
+  registrationType!: string;
+  companyDescription!: string;
+  parentCompanyId!: number;
+  primaryPerson!: Person;
+  isAttended!: boolean;
+  companySurvey!: CompanySurvey;
+  isProspect!: boolean;
+  recommended!: boolean;
+  questionAnswersIds!: number[];
+  publish: CommInfo = new CommInfo();
+  flags: Flag[] = [];
+  searchablequestionId!: number;
+  appointmentCodeID!: number;
+  regPersonRegistrationID!: number;
+  scheduleBookID!: number;
+  targetScheduleTypeID!: number;
+}
